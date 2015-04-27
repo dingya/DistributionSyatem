@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <declare-styleable name="editText">
+        <attr name="drawableLeftFormal" format="reference" />
+        <attr name="drawableLeftFouse" format="reference" />
+        <attr name="distanceLeft" format="integer"/>
+        <attr name="scaleLeft" format="integer"/>
+    </declare-styleable>
+</resources>
