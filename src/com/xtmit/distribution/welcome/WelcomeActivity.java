@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.view.Window;
 import android.widget.Toast;
 
 import com.xtmit.distribution.login.LoginManager;
@@ -46,6 +47,7 @@ public class WelcomeActivity extends Activity implements IServiceHandler {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_welcome);
 		
 	}
@@ -55,13 +57,15 @@ public class WelcomeActivity extends Activity implements IServiceHandler {
 	protected void onResume() {
  		super.onResume();
 		registe();
-		Message msg;
+		//Message msg;
 		if(isFirst(Constant.LOGIN_CACHE)){
-			msg= handle.obtainMessage(WHAT_LOGIN_HANDLE);
+			//msg= handle.obtainMessage(WHAT_LOGIN_HANDLE);
+			handle.sendEmptyMessageDelayed(WHAT_LOGIN_HANDLE, 5000);
 		}else{
-			msg= handle.obtainMessage(WHAT_WELCOME_OVER);
+			handle.sendEmptyMessageDelayed(WHAT_WELCOME_OVER, 5000);
+			//msg= handle.obtainMessage(WHAT_WELCOME_OVER);
 		}
-		handle.sendMessageAtTime(msg, 5000);
+		//handle.sendMessageAtTime(msg, 5000);
 	}
 	/**
 	 * 
