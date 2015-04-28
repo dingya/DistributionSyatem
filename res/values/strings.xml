@@ -148,6 +148,8 @@
   <string name="order_get">order get</string>
   <string name="actionbar_back">Back</string>
   <string name="setting">Setting</string>
-  <string name="qr_code">QR code</string>
+  <string name="qr_code">QR Code</string>
   <string name="title_scan">Scan Options</string>
+  <string name="login_out">Login Out</string>
+  <string name="modify_password">Modify Password</string>
 </resources>

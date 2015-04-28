@@ -2,38 +2,55 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical" 
+    android:background="@drawable/login_bg">
     
-    <com.xtmit.distribution.view.ClearEditText
-        android:id="@+id/editText_username"
+    <ImageView 
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/login_logo"/>
+    <LinearLayout 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:layout_marginLeft="34dp"
-        android:layout_marginRight="34dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginRight="34dp">
+     <com.xtmit.distribution.view.ClearEditText
+        android:id="@+id/editText_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="40dp"
+        android:background="@drawable/login_input_bg"
         android:hint="@string/username"
+        android:layout_weight="1"
+        android:padding="8dp"
         />
     
     <com.xtmit.distribution.view.ClearEditText
+        android:padding="8dp"
         android:id="@+id/editText_password"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="34dp"
-        android:layout_marginRight="34dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="40dp"
+        android:background="@drawable/login_input_bg"
         android:hint="@string/password"
+        android:layout_weight="1"
         />
     
     <Button 
-        android:background="#888866"
-        android:textSize="28sp"
+         android:textSize="28sp"
         android:textColor="#aad9ff"
-         android:layout_marginTop="60dp"
-        android:layout_width="wrap_content"
+         android:layout_marginTop="40dp" 
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="50dp"
-        android:paddingRight="50dp"
+        android:background="@drawable/selector_login_btn"
         android:text="@string/login"
         android:layout_gravity="center"
-        android:id="@+id/btn_login"/>
+        android:id="@+id/btn_login"
+        android:layout_weight="1"/>
+        
+    </LinearLayout>
+   
 </LinearLayout>

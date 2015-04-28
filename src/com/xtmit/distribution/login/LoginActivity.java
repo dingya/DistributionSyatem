@@ -31,6 +31,7 @@ public class LoginActivity extends Activity implements IServiceHandler{
 		// TODO 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
+		getActionBar().hide();
 		registe();
 		cet_name= (ClearEditText) findViewById(R.id.editText_username);
 		cet_pass= (ClearEditText) findViewById(R.id.editText_password);

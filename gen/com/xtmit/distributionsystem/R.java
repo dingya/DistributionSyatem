@@ -231,6 +231,7 @@ containing a value of this type.
         public static final int selector_positivebtn_bg=0x7f02000b;
         public static final int set_icon=0x7f02000c;
         public static final int share_via_barcode=0x7f02000d;
+        public static final int welcome=0x7f02000e;
     }
     public static final class id {
         public static final int actionbar_back=0x7f08002e;

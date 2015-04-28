@@ -150,4 +150,6 @@
   <string name="setting">设置</string>
   <string name="qr_code">二维码</string>
   <string name="title_scan">扫码操作</string>
+  <string name="login_out">退出登陆</string>
+  <string name="modify_password">修改密码</string>
 </resources>

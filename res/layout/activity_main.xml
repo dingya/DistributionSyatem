@@ -5,44 +5,34 @@
         android:orientation="vertical">
        
    <LinearLayout 
-       android:background="#dbdbdb"
-       android:orientation="vertical"
+        android:orientation="vertical"
+       android:layout_marginLeft="8dip"
+       android:layout_marginRight="8dip"
+       
        android:layout_width="match_parent"
        android:layout_height="0dp"
-       android:layout_weight="3">
+       android:layout_weight="5">
        <Button 
-           android:background="#ff8777" 
+           android:layout_marginTop="8dip"
+           android:background="@drawable/selector_main_btn_order" 
            android:id="@+id/btn_order"
-           android:layout_weight="1"
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           android:text="下料"
-           android:textSize="21sp"
-           android:textStyle="bold"
-           android:textColor="#EEEEEE"
+            android:layout_width="match_parent"
+           android:layout_height="wrap_content"
            />
        <Button 
-           android:background="#11cf11"
-            
+           android:background="@drawable/selector_main_btn_outstorage"
+            android:layout_marginTop="8dip"
            android:id="@+id/btn_outStore"
-           android:layout_weight="1"
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           android:text="出库"
-           android:textSize="21sp"
-           android:textStyle="bold"
-           android:textColor="#eeeeeE"/>
+            android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+            />
        <Button 
-           android:background="#afa7f7"
-            
+           android:background="@drawable/selector_main_btn_over"
+            android:layout_marginTop="8dip"
            android:id="@+id/btn_distributionOver"
-           android:layout_weight="1"
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           android:text="配送完成"
-           android:textSize="21sp"
-           android:textStyle="bold"
-           android:textColor="#EEEEEE"/>
+            android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+            />
    </LinearLayout>
    
     <LinearLayout 
@@ -53,11 +43,8 @@
        android:layout_weight="1"
         >
         <Button 
-           android:background="#ff8777"
-           android:layout_marginTop="40dp"
-           android:layout_marginBottom="25dp"
-           android:layout_marginRight="12dp"
-           android:layout_marginLeft="5dp"
+           android:background="@drawable/main_btn_orderrecord"
+            
            android:id="@+id/btn_toOrderlist"
            android:layout_weight="1"
            android:layout_width="0dp"
@@ -65,12 +52,10 @@
            android:text="下料记录"
            android:textSize="21sp"
            android:textStyle="bold"
-           android:textColor="#EEEEEE"
+           android:textColor="@color/color_888"
            />
        <Button 
-           android:background="#11cf11"
-           android:layout_marginTop="40dp"
-           android:layout_marginBottom="25dp"
+           android:background="@drawable/main_btn_outstorage_record" 
            android:id="@+id/btn_toOutStoreRecord"
            android:layout_weight="1"
            android:layout_width="0dp"

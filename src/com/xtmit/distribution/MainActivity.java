@@ -460,6 +460,15 @@ public class MainActivity extends BaseActivity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// TODO Auto-generated method stub
+		switch (item.getItemId()) {
+		case R.id.actionbar_setting:
+			startActivity(new Intent("setting"));
+			break;
+
+		default:
+			break;
+		}
+		
 		return super.onOptionsItemSelected(item);
 	}
 	

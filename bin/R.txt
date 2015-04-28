@@ -69,6 +69,7 @@ int drawable selector_cancelbtn_bg 0x7f02000a
 int drawable selector_positivebtn_bg 0x7f02000b
 int drawable set_icon 0x7f02000c
 int drawable share_via_barcode 0x7f02000d
+int drawable welcome 0x7f02000e
 int id actionbar_back 0x7f08002e
 int id actionbar_setting 0x7f080051
 int id actionbar_title 0x7f08002f
