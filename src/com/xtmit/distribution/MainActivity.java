@@ -55,7 +55,7 @@ public class MainActivity extends BaseActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		btnOrder=(Button) findViewById(R.id.btn_order);
-		btnOutStorage=(Button) findViewById(R.id.btn_outStore);
+	 btnOutStorage= (Button) findViewById(R.id.btn_outStore);
 		btnOver=(Button) findViewById(R.id.btn_distributionOver);
 		btnOrderRecoder = (Button) findViewById(R.id.btn_toOrderlist);
 		btnOutStorageRecoder = (Button) findViewById(R.id.btn_toOutStoreRecord);

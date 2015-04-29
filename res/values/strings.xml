@@ -152,4 +152,17 @@
   <string name="title_scan">Scan Options</string>
   <string name="login_out">Login Out</string>
   <string name="modify_password">Modify Password</string>
+  <string name="old_pass">Old Password</string>
+    <string name="new_pass">New Password</string>
+    <string name="makesure">Make Sure</string>
+    <string name="confirm">Confirm</string>
+    <string name="input_again">Input Again</string>
+   <string name="input_new_pass">Input New Pass</string>
+   <string name="input_old_pass">Input Old Pass</string>
+   <string name="modify_pass">Modify Login Pass</string>
+   <string name="order_record">Record of Order</string>
+   <string name="out_storage_record">Delivery Of Cargo From Storage Record</string>
+   <string name="_order">Order</string>
+   <string name="load_up">Load Up</string>
+   <string name="unloading">Unloading</string>
 </resources>

@@ -152,4 +152,17 @@
   <string name="title_scan">扫码操作</string>
   <string name="login_out">退出登陆</string>
   <string name="modify_password">修改密码</string>
+  <string name="old_pass">旧密码 </string>
+   <string name="new_pass">新密码</string>
+   <string name="makesure">确认密码</string>
+   <string name="confirm">确认修改</string>
+   <string name="input_again">请再次输入</string>
+   <string name="input_new_pass">请输入新密码</string>
+   <string name="input_old_pass">请输入旧密码</string>
+   <string name="modify_pass">修改登陆密码</string>
+   <string name="order_record">下料记录</string>
+   <string name="out_storage_record">出库记录</string>
+   <string name="_order">下料</string>
+   <string name="load_up">装载货物</string>
+   <string name="unloading">卸货</string>
 </resources>

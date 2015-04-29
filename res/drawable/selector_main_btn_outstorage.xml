@@ -3,5 +3,4 @@
     <item android:state_focused="true" android:drawable="@drawable/main_btn_outstorage"></item>
 	<item android:state_pressed="true" android:drawable="@drawable/main_btn_outstorage_act"></item>
 	<item android:state_pressed="false" android:drawable="@drawable/main_btn_outstorage"></item>
-
 </selector>

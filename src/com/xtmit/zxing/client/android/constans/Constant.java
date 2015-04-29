@@ -86,7 +86,10 @@ public class Constant {
 		public static final String WEB_MOTHED_updateMaterialRequisationStatusDistributionOver = "updateMaterialRequisationStatusDistributionOver";
 		public static final String WEB_MOTHED_getMyOrderAlreadyOutStorage = "getMyOrderAlreadyOutStorage";
 		public static final String WEB_PARAM_MQStatus = "MQStatus";
-		
+		public static final String WEB_MOTHED_modifypassword = "updateUserPwd";
+		public static final String WEB_PARAM_ModifycompanyID="companyID";
+		public static final String WEB_PARAM_CompanyUserPassword="CompanyUserPassword";
+		public static final String WEB_PARAM_CompanyUserID = "CompanyUserID";
 	}
 	
 	

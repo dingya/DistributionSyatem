@@ -55,10 +55,10 @@ public class LoginActivity extends Activity implements IServiceHandler{
 	@Override
 	public void action(String action, Intent in, BroadcastReceiver b) {
  		if (action.equals(IServiceHandler.LOGIN_FAILED)) {
-			
+ 			cet_pass.setText("");
+ 			cet_name.setText("");
 		}else if(action.equals(IServiceHandler.LOGIN_SUCCESS)){
 			startActivity(new Intent("mainActivity"));
-			
 			String cacheName=Constant.LOGIN_CACHE;
 			Map<String, String> map= new LinkedHashMap<String, String>();
 			map.put(Constant.CACHE_NAME, Constant.gloableUserModel.getCompanyUserName());

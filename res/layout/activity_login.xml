@@ -21,7 +21,7 @@
         android:id="@+id/editText_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" 
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/login_input_bg"
         android:hint="@string/username"
         android:layout_weight="1"
@@ -33,16 +33,16 @@
         android:id="@+id/editText_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" 
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/login_input_bg"
         android:hint="@string/password"
         android:layout_weight="1"
         />
     
     <Button 
-         android:textSize="28sp"
+        android:textSize="24sp"
         android:textColor="#aad9ff"
-         android:layout_marginTop="40dp" 
+        android:layout_marginTop="20dp" 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/selector_login_btn"
@@ -50,7 +50,6 @@
         android:layout_gravity="center"
         android:id="@+id/btn_login"
         android:layout_weight="1"/>
-        
     </LinearLayout>
    
 </LinearLayout>

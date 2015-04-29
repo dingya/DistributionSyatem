@@ -105,7 +105,9 @@ public class WelcomeActivity extends Activity implements IServiceHandler {
 	@Override
 	public void action(String action, Intent in, BroadcastReceiver b) {
  		if (action.equals(IServiceHandler.LOGIN_FAILED)) {
-			Toast.makeText(getApplicationContext(), in.getStringExtra(Constant.FAILED_RESION), 3000).show();
+			Toast.makeText(getApplicationContext(), in.getStringExtra(Constant.FAILED_RESION), Toast.LENGTH_LONG).show();
+			startActivity(new Intent("ditributionLogin"));
+			finish();
 		}else if(action.equals(IServiceHandler.LOGIN_SUCCESS)){
 			startActivity(new Intent("mainActivity"));
 			finish();

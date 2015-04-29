@@ -52,6 +52,13 @@
             </intent-filter>
         </activity>
         
+        <activity android:name="com.xtmit.distribution.ModifyPasswordActivity">
+            <intent-filter>
+                <action android:name="modifypassword"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+     	</activity>
+        
         <activity android:name="com.xtmit.distribution.SettingActivity">
             <intent-filter>
                 <action android:name="setting"/>
