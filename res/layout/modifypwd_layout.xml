@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:background="@color/buttoncancel_color_nomal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dip"
+        android:layout_marginLeft="1dip"
+        android:layout_marginRight="1dip"
+       	android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dip"
+            android:layout_marginLeft="15dip"
+            android:layout_marginTop="20dip"
+            android:layout_weight="3"
+            android:text="@string/old_pass"
+            android:textSize="18sp" />
+
+        <com.xtmit.distribution.view.ClearEditText
+            android:id="@+id/et_oldpass"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="7"
+            android:background="@null"
+            android:hint="@string/input_old_pass"
+            android:inputType="numberPassword" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dip"
+        android:background="@color/buttoncancel_color_nomal"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dip"
+            android:layout_marginLeft="15dip"
+            android:layout_marginTop="20dip"
+            android:layout_weight="3"
+            android:text="@string/new_pass"
+            android:textSize="18sp" />
+
+        <com.xtmit.distribution.view.ClearEditText
+            android:id="@+id/et_newpass"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="7"
+            android:background="@null"
+            android:hint="@string/input_new_pass"
+            android:inputType="numberPassword" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dip"
+        android:background="@color/buttoncancel_color_nomal"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dip"
+            android:layout_marginLeft="15dip"
+            android:layout_marginTop="20dip"
+            android:layout_weight="3"
+            android:text="@string/makesure"
+            android:textSize="18sp" />
+
+        <com.xtmit.distribution.view.ClearEditText
+            android:id="@+id/et_makeSurepass"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="7"
+            android:background="@null"
+            android:hint="@string/input_again"
+            android:inputType="numberPassword" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dip"
+        android:background="@drawable/selector_confirm_btn"
+        android:paddingBottom="15dip"
+        android:paddingTop="15dip"
+        android:text="@string/confirm"
+        android:textSize="22sp" />
+
+</LinearLayout>
