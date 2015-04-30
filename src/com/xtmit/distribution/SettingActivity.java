@@ -40,7 +40,7 @@ public class SettingActivity extends BaseActivity {
 			case R.id.modifyPass_Login:
 				startActivity(new Intent("modifypassword"));
 			case R.id.btn_exit:
-				startActivity(new Intent("ditributionLogin"));
+				startActivity(new Intent("ditributionLogin").setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK));
 				finish();
 			default:
 				break;
