@@ -8,8 +8,8 @@ import java.util.Map;
 
 import org.json.JSONObject;
 
-import android.app.Activity;
 import android.content.Context;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -68,7 +68,7 @@ public class RecordListActivity extends BaseActivity {
 		super.onResume();
 		 
 		int record = getIntent().getIntExtra(Constant.WhichRecord,
-				Constant.RecorderOrder);
+				Constant.RECORD_TYPE_ORDER_RECORD);
 		listRcord = initData(record);
 		listRcord = UpdateSql(listRcord,record);
 		
@@ -82,12 +82,33 @@ public class RecordListActivity extends BaseActivity {
 
 			@Override
 			public void onRefresh(PullToRefreshBase<ListView> refreshView) {
- 				RecordListActivity.this.onResume();
- 				pullRefreshList.onRefreshComplete();
+				RecordListActivity.this.onResume();
+				//pullRefreshList.onRefreshComplete(); 
+				//adapter.notifyDataSetChanged();
+				//pullRefreshList.setRefreshing();
+				 new FinishRefresh().execute();
+				adapter.notifyDataSetInvalidated();
 			}
 		} );
 
 	}
+	
+	 private class FinishRefresh extends AsyncTask<Void, Void, Void>{    
+	        @Override    
+	        protected Void doInBackground(Void... params) {    
+	             try {    
+	                 Thread.sleep(1500);    
+	             } catch (InterruptedException e) {    
+	             }    
+	            return null;    
+	        }    
+	     
+	        @Override    
+	        protected void onPostExecute(Void result){    
+//	          adapter.notifyDataSetChanged();  
+	        	pullRefreshList.onRefreshComplete();    
+	        }    
+	    }   
 
 	private List<CacheRecordModel> UpdateSql(List<CacheRecordModel> listRcord2,int recordType) {
 		LinkedHashMap<String, Object> datas = null;
@@ -100,10 +121,17 @@ public class RecordListActivity extends BaseActivity {
 			datas.put(WebServiceMethod.WEB_PARAM_RunningNum, cacheRecordModel.getRunningNumber());
 			datas.put(WebServiceMethod.WEB_PARAM_ProductionLineID, cacheRecordModel.getProductionId());
 			datas.put(WebServiceMethod.WEB_PARAM_MQStatus, recordType==Constant.RECORD_TYPE_ORDER_RECORD?30:40);
+			datas.put(WebServiceMethod.WEB_PARAM_MaterialRequisitionNum, cacheRecordModel.getMaterialResquitionNum());
 			JSONObject json = WebService.stratWebServices(WebServiceMethod.WEB_MOTHED_getMyOrderAlreadyOutStorage, datas);
+			if (json==null) {
+				return null;
+			}
 			ResultModel resultModel=Constant.gson.fromJson(json.toString(), ResultModel.class);
+			if (resultModel==null) {
+				return null;
+			}
 			if(resultModel.getResult().equals(ResultType.Success.name())){
-				MQnum.add(resultModel.getMsg().toString());
+				MQnum.add(cacheRecordModel.getMaterialResquitionNum());
 				collection.add(cacheRecordModel);
 			}
 		}
@@ -122,28 +150,13 @@ public class RecordListActivity extends BaseActivity {
 	}
 
 	private List<CacheRecordModel> initData(int record) {
-		Map<String, String> where = new HashMap<String, String>();
-		switch (record) {
-		case Constant.RecorderOrder:
-			//where.put("userID", Constant.gloableUserModel.getCompanyUserID()+ "");
-			where.put("recordType", String.valueOf(Constant.RECORD_TYPE_ORDER_RECORD));
-			//CacheRecordModel Model= new CacheRecordModel();
-			//Model.setUserID(Constant.gloableUserModel.getCompanyUserID()+0l);
-			return MyApplication.dbManager.getRecordByWhere(where);
-		case Constant.RecorderOutStorage:
-			//where.put("userID", Constant.gloableUserModel.getCompanyUserID()+ "");
-			where.put("recordType", Constant.RECORD_TYPE_OUT_STORAGE_RECORD+ "");
-			return MyApplication.dbManager.getRecordByWhere(where);
-		default:
-			break;
-		}
-		return listRcord;
+			Map<String, String> where = new HashMap<String, String>();  
+			where.put("recordType", record+ "");
+		return MyApplication.dbManager.getRecordByWhere(where); 
 	}
 	
 	
 	private class RecordAdapter extends BaseAdapter{
-
-
 		private Context mContext;
 		private List<CacheRecordModel> mlist;
 

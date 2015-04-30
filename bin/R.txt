@@ -96,9 +96,10 @@ int drawable selector_main_btn_over 0x7f020025
 int drawable selector_modify_pass 0x7f020026
 int drawable selector_positivebtn_bg 0x7f020027
 int drawable selector_record 0x7f020028
-int drawable set_icon 0x7f020029
-int drawable share_via_barcode 0x7f02002a
-int drawable welcome 0x7f02002b
+int drawable selector_textcolor_mainbottom 0x7f020029
+int drawable set_icon 0x7f02002a
+int drawable share_via_barcode 0x7f02002b
+int drawable welcome 0x7f02002c
 int id actionbar_back 0x7f08002e
 int id actionbar_setting 0x7f080057
 int id actionbar_title 0x7f08002f

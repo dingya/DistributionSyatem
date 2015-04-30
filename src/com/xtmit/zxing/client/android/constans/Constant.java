@@ -6,6 +6,8 @@ import com.xtmit.distribution.model.CompanyUserModel;
 public class Constant {
 	public static final int RECORD_TYPE_ORDER_RECORD=1;
 	public static final int RECORD_TYPE_OUT_STORAGE_RECORD=2;
+	
+	
 	public static final String SCAN_RESUALT_TEXT = "scan_resualt_text";
 	public static final int RESULTCODE_CAPTURE_ACTIVITY = 0x111;
 	public static final int REQUESTCODE_MAIN_ACTIVITY = 0x110;
@@ -35,8 +37,7 @@ public class Constant {
 	//extra µÄ ¸÷ÖÖkey
 	public static final String actionBarTitle = "actionBarTitle";
 	public static final String WhichRecord = "WhichRecord";
-	public static final int  RecorderOrder = 21;
-	public static final int  RecorderOutStorage = 22;
+ 
 	public static final String tableName_OrderList = "table_Record";
 	public static final String DB_NAME = "Distribute_DB_Record";
  	/**
@@ -90,6 +91,7 @@ public class Constant {
 		public static final String WEB_PARAM_ModifycompanyID="companyID";
 		public static final String WEB_PARAM_CompanyUserPassword="CompanyUserPassword";
 		public static final String WEB_PARAM_CompanyUserID = "CompanyUserID";
+		public static final String WEB_PARAM_MaterialRequisitionNum = "MaterialRequisitionNum";
 	}
 	
 	

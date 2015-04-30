@@ -6,6 +6,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import android.content.BroadcastReceiver;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+
+import com.xtmit.distribution.BaseActivity;
 import com.xtmit.distribution.service.IServiceHandler;
 import com.xtmit.distribution.service.ServiceHandler;
 import com.xtmit.distribution.view.ClearEditText;
@@ -14,15 +22,7 @@ import com.xtmit.zxing.client.android.constans.Constant;
 import com.xtmit.zxing.client.android.util.PreferencesUtils;
 import com.xtmit.zxing.client.android.util.StringUtils;
 
-import android.app.Activity;
-import android.content.BroadcastReceiver;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-
-public class LoginActivity extends Activity implements IServiceHandler{
+public class LoginActivity extends BaseActivity implements IServiceHandler{
 	
 	Button btn_login;
 	ClearEditText cet_name,cet_pass;

@@ -13,7 +13,7 @@
         android:orientation="vertical" >
 
         <Button
-            android:paddingTop="35dp"
+            android:paddingTop="40dp"
             android:id="@+id/btn_order"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
             android:textColor="@color/result_text"
             android:textSize="24sp" />
 
-        <Button android:paddingTop="35dp"
+        <Button android:paddingTop="40dp"
               android:id="@+id/btn_outStore"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -34,7 +34,7 @@
             android:textSize="24sp" />
 
         <Button 
-            android:paddingTop="35dp"
+            android:paddingTop="40dp"                        
              android:id="@+id/btn_distributionOver"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
             android:layout_weight="1"
             android:background="@drawable/selector_main_btn_orderrecord"
             android:text="@string/order_record"
-            android:textColor="@color/color_888"
+            android:textColor="@drawable/selector_textcolor_mainbottom"
             android:textSize="21sp"
              />
 
@@ -69,7 +69,7 @@
             android:layout_weight="1"
             android:background="@drawable/selector_main_btn_orderrecord"
             android:text="@string/out_storage_record"
-            android:textColor="@color/color_888"
+            android:textColor="@drawable/selector_textcolor_mainbottom"
             android:textSize="21sp"
              />
     </LinearLayout>

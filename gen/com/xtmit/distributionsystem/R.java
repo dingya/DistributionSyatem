@@ -258,9 +258,10 @@ containing a value of this type.
         public static final int selector_modify_pass=0x7f020026;
         public static final int selector_positivebtn_bg=0x7f020027;
         public static final int selector_record=0x7f020028;
-        public static final int set_icon=0x7f020029;
-        public static final int share_via_barcode=0x7f02002a;
-        public static final int welcome=0x7f02002b;
+        public static final int selector_textcolor_mainbottom=0x7f020029;
+        public static final int set_icon=0x7f02002a;
+        public static final int share_via_barcode=0x7f02002b;
+        public static final int welcome=0x7f02002c;
     }
     public static final class id {
         public static final int actionbar_back=0x7f08002e;
