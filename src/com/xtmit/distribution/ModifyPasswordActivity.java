@@ -78,6 +78,11 @@ public class ModifyPasswordActivity extends BaseActivity {
 						JSONObject json = WebService.stratWebServices(
 								WebServiceMethod.WEB_MOTHED_modifypassword,
 								datas);
+						if(json==null){
+							Toast.makeText(ModifyPasswordActivity.this, "∑˛ŒÒ∆˜∑√Œ  ß∞‹",
+									Toast.LENGTH_LONG).show();
+							return;
+						}
 						ResultModel rm = Constant.gson.fromJson(
 								json.toString(), ResultModel.class);
 
@@ -99,7 +104,6 @@ public class ModifyPasswordActivity extends BaseActivity {
 									Toast.LENGTH_LONG).show();
 							ModifyPasswordActivity.this.finish();
 						}
-
 					}
 				} else {
 					Toast.makeText(ModifyPasswordActivity.this, "æ…√‹¬Î¥ÌŒÛ", Toast.LENGTH_LONG)

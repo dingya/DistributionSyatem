@@ -27,7 +27,8 @@ public class WelcomeActivity extends Activity implements IServiceHandler {
 			
 			switch (msg.what) {
 			case WHAT_WELCOME_OVER:
-				startActivity(new Intent("ditributionLogin"));
+				startActivity(new Intent("ditributionLogin").addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP));
+				finish();
 				break;
 			case WHAT_LOGIN_HANDLE:
 				String name = getCacheName();
@@ -60,9 +61,9 @@ public class WelcomeActivity extends Activity implements IServiceHandler {
 		//Message msg;
 		if(isFirst(Constant.LOGIN_CACHE)){
 			//msg= handle.obtainMessage(WHAT_LOGIN_HANDLE);
-			handle.sendEmptyMessageDelayed(WHAT_LOGIN_HANDLE, 5000);
+			handle.sendEmptyMessageDelayed(WHAT_LOGIN_HANDLE, 3000);
 		}else{
-			handle.sendEmptyMessageDelayed(WHAT_WELCOME_OVER, 5000);
+			handle.sendEmptyMessageDelayed(WHAT_WELCOME_OVER, 3000);
 			//msg= handle.obtainMessage(WHAT_WELCOME_OVER);
 		}
 		//handle.sendMessageAtTime(msg, 5000);
@@ -106,7 +107,7 @@ public class WelcomeActivity extends Activity implements IServiceHandler {
 	public void action(String action, Intent in, BroadcastReceiver b) {
  		if (action.equals(IServiceHandler.LOGIN_FAILED)) {
 			Toast.makeText(getApplicationContext(), in.getStringExtra(Constant.FAILED_RESION), Toast.LENGTH_LONG).show();
-			startActivity(new Intent("ditributionLogin"));
+			startActivity(new Intent("ditributionLogin").addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP));
 			finish();
 		}else if(action.equals(IServiceHandler.LOGIN_SUCCESS)){
 			startActivity(new Intent("mainActivity"));

@@ -15,14 +15,13 @@ import android.content.DialogInterface.OnDismissListener;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.Gravity;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
 import com.xtmit.distribution.app.MyApplication;
@@ -50,6 +49,7 @@ public class MainActivity extends BaseActivity {
 	Button btnOrder, btnOutStorage, btnOver, btnOrderRecoder,
 			btnOutStorageRecoder;
 	private AlertDialog dialog;
+	private AlertDialog dialogError;
 
 	// private String times;
 
@@ -184,14 +184,14 @@ public class MainActivity extends BaseActivity {
 									WebServiceMethod.WEB_MOTHED_getGoodsModel,
 									datas2);
 							if (json == null) {
-								showError("服务器出错,请及时反馈json=null");
+								showError("服务器出错!\n请及时反馈json=null");
 								return;
 							}
 							ResultModel ressult = Constant.gson.fromJson(
 									json.toString(), ResultModel.class);
 							WebService.clear();
 							if (ressult == null) {
-								showError("服务器出错,请及时反馈ressult=null");
+								showError("服务器出错!\n请及时反馈:ressult=null");
 								return;
 							}
 							if (ressult.getResult().equals(
@@ -225,7 +225,7 @@ public class MainActivity extends BaseActivity {
 								if (resm.getResult().equals(
 										ResultType.Failed.name())) {
 
-									showError(resm.getMsg() == null ? "服务器出错,请及时反馈"
+									showError(resm.getMsg() == null ? "服务器出错!\n请及时反馈"
 											: resm.getMsg().toString());
 								} else if (resm.getResult().equals(
 										ResultType.Success.name())) {
@@ -241,7 +241,7 @@ public class MainActivity extends BaseActivity {
 									 * str.length
 									 * (),Spannable.SPAN_INCLUSIVE_EXCLUSIVE);
 									 */
-									showError("已生成领料单,单号:"
+									showError("已生成领料单\n单号:"
 											+ resm.getMsg().toString());
 									insertLoacalRecord(
 											resm.getMsg().toString(), fromJson,
@@ -323,10 +323,11 @@ public class MainActivity extends BaseActivity {
 					ProductionLineModel fromJsons, int status) {
 				SimpleDateFormat dateFormat1 = new SimpleDateFormat(
 						"yyyy-MM-dd HH:mm:ss");
-				CacheRecordModel model = new CacheRecordModel(Num, fromJsons
-						.getProductionLineName(), fromJsons
-						.getProductionLineID() + 0l, fromJsons
-						.getMaterialName(), fromJsons.getRunningNumber(),
+				CacheRecordModel model = new CacheRecordModel(Num,
+						fromJsons.getProductionLineName(), 
+						fromJsons.getProductionLineID() + 0l,
+						fromJsons.getMaterialName(),
+						fromJsons.getRunningNumber(),
 						fromJsons.getProductionLineStatus() + 0l,
 						Constant.gloableUserModel.getCompanyUserName(),
 						Constant.gloableUserModel.getCompanyUserID() + 0l,
@@ -355,12 +356,16 @@ public class MainActivity extends BaseActivity {
 	private void showError(String string) {
 		View layout = View.inflate(this, R.layout.custom, null);
 		TextView text = (TextView) layout.findViewById(R.id.tvTextToast);
+		ImageView cross=  (ImageView) layout.findViewById(R.id.img_cross);
 		text.setText(string);
-		Toast toast = new Toast(getApplicationContext());
-		toast.setGravity(Gravity.RIGHT | Gravity.TOP, 12, 40);
-		toast.setDuration(Toast.LENGTH_LONG);
-		toast.setView(layout);
-		toast.show();
+		cross.setOnClickListener(l);
+		//Toast toast = new Toast(getApplicationContext());
+		dialogError = new AlertDialog.Builder(this).setView(layout).show();
+		  
+		//toast.setGravity(Gravity.RIGHT | Gravity.TOP, 12, 40);
+		//toast.setDuration(Toast.LENGTH_LONG);
+		//toast.setView(layout);
+		//toast.show();
 
 	}
 
@@ -467,7 +472,7 @@ public class MainActivity extends BaseActivity {
 		return basicGoods;
 	}
 
-	private int i = 0;
+//	private int i = 0;
 	/** 所有点击 事件 */
 	private OnClickListener l = new OnClickListener() {
 
@@ -476,15 +481,15 @@ public class MainActivity extends BaseActivity {
 		public void onClick(View v) {
 			switch (v.getId()) {
 			case R.id.btn_diologCancel:
-
-				i++;
+				dialog.dismiss();
+				/*i++;
 				if (i > 1) {
 					dialog.dismiss();
 				} else {
 					Toast.makeText(getApplicationContext(), "双击取消", 2000)
 							.show();
 				}
-				h.sendEmptyMessageDelayed(1, 2000);
+				h.sendEmptyMessageDelayed(1, 2000);*/
 				break;
 			case R.id.btn_order:
 				// 通知下料
@@ -523,6 +528,10 @@ public class MainActivity extends BaseActivity {
 						Constant.WhichRecord,
 						Constant.RECORD_TYPE_OUT_STORAGE_RECORD));
 				break;
+				
+			case R.id.img_cross:
+				dialogError.dismiss();
+				break;
 			default:
 				break;
 			}
@@ -533,7 +542,7 @@ public class MainActivity extends BaseActivity {
 		public void handleMessage(android.os.Message msg) {
 			switch (msg.what) {
 			case 1:
-				i = 0;
+				//i = 0;
 				break;
 
 			default:

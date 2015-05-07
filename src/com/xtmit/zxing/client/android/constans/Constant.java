@@ -12,7 +12,7 @@ public class Constant {
 	public static final int RESULTCODE_CAPTURE_ACTIVITY = 0x111;
 	public static final int REQUESTCODE_MAIN_ACTIVITY = 0x110;
 	public static final String NameSpace = "http://service.ws.cxf.com/";
-	public static final String WSDL = "http://218.4.217.58:9999/CXF-WS-Server";
+	public static final String WSDL = "http://218.4.217.58:59999/CXF-WS-Server";
 	public static final String WSDLTest = "http://192.168.1.100:9999/CXF-WS-Server";
 	/**»º´æ ÎÄ¼þÃû key*/
 	public static final String LOGIN_CACHE = "login_cache";

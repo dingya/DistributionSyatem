@@ -188,7 +188,7 @@ public class RecordListActivity extends BaseActivity {
 			}
 
 			vh.tv_materialReqNum.setText(listRcord.get(position)
-					.getMaterialResquitionNum());
+					.getMaterialName());
 			vh.tv_ProductLineName.setText(listRcord.get(position)
 					.getProductionName());
 			vh.tv_time.setText(listRcord.get(position).getTime());

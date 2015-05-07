@@ -42,17 +42,17 @@ public final class R {
 		public static final int indicator_right_padding = 0x7f070000;
 	}
 	public static final class drawable {
-		public static final int default_ptr_flip = 0x7f020005;
-		public static final int default_ptr_rotate = 0x7f020006;
-		public static final int ic_launcher = 0x7f020008;
-		public static final int indicator_arrow = 0x7f02000a;
-		public static final int indicator_bg_bottom = 0x7f02000b;
-		public static final int indicator_bg_top = 0x7f02000c;
+		public static final int default_ptr_flip = 0x7f020006;
+		public static final int default_ptr_rotate = 0x7f020007;
+		public static final int ic_launcher = 0x7f020009;
+		public static final int indicator_arrow = 0x7f02000b;
+		public static final int indicator_bg_bottom = 0x7f02000c;
+		public static final int indicator_bg_top = 0x7f02000d;
 	}
 	public static final class id {
 		public static final int both = 0x7f08000a;
 		public static final int disabled = 0x7f08000b;
-		public static final int fl_inner = 0x7f08003b;
+		public static final int fl_inner = 0x7f08003c;
 		public static final int flip = 0x7f080011;
 		public static final int gridview = 0x7f080000;
 		public static final int manualOnly = 0x7f08000c;
@@ -60,10 +60,10 @@ public final class R {
 		public static final int pullFromEnd = 0x7f08000e;
 		public static final int pullFromStart = 0x7f08000f;
 		public static final int pullUpFromBottom = 0x7f080010;
-		public static final int pull_to_refresh_image = 0x7f08003c;
-		public static final int pull_to_refresh_progress = 0x7f08003d;
-		public static final int pull_to_refresh_sub_text = 0x7f08003f;
-		public static final int pull_to_refresh_text = 0x7f08003e;
+		public static final int pull_to_refresh_image = 0x7f08003d;
+		public static final int pull_to_refresh_progress = 0x7f08003e;
+		public static final int pull_to_refresh_sub_text = 0x7f080040;
+		public static final int pull_to_refresh_text = 0x7f08003f;
 		public static final int rotate = 0x7f080012;
 		public static final int scrollview = 0x7f080002;
 		public static final int webview = 0x7f080001;

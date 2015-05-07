@@ -118,7 +118,7 @@ public class WebService {
 				if (_wsdl != null) {
 					httpTranstation = new HttpTransportSE(_wsdl, 10000);
 				} else {
-					httpTranstation = new HttpTransportSE(Constant.WSDLTest,
+					httpTranstation = new HttpTransportSE(Constant.WSDL,
 							10000);
 				}
 				try {

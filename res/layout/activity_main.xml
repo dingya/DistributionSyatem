@@ -62,6 +62,9 @@
             android:textSize="21sp"
              />
 
+        <TextView android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#ddd4d3"/>
         <Button 
             android:id="@+id/btn_toOutStoreRecord"
             android:layout_width="0dp"
