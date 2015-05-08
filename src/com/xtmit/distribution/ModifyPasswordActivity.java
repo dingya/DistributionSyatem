@@ -4,6 +4,7 @@ import java.util.LinkedHashMap;
 
 import org.json.JSONObject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -102,6 +103,7 @@ public class ModifyPasswordActivity extends BaseActivity {
 											.getCompanyUserPassword());
 							Toast.makeText(ModifyPasswordActivity.this, "…Ë÷√≥…π¶",
 									Toast.LENGTH_LONG).show();
+							startActivity(new Intent("ditributionLogin").setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK));
 							ModifyPasswordActivity.this.finish();
 						}
 					}

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
     <item android:id="@+id/actionbar_setting" 
-        android:icon="@drawable/set_icon"
+        android:icon="@drawable/bitmap_setting_icon"
         android:orderInCategory="1"
         android:title="@string/setting"
         android:showAsAction="always">
